@@ -1,0 +1,25 @@
+# Python
+__pycache__/
+*.pyc
+
+# Jupyter
+.ipynb_checkpoints/
+
+# VS Code
+.vscode/
+
+# Results
+results/checkpoints/
+results/logs/
+results/tensorboard/
+
+# Models
+*.pth
+*.pt
+
+# Dataset
+data/
+
+# OS
+.DS_Store
+Thumbs.db
