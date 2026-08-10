@@ -1,0 +1,9 @@
+{
+    "dataset": "STL10",
+    "method": "SimCLR",
+    "encoder": "ResNet50",
+    "epochs": 100,
+    "final_infonce_loss": 3.0251,
+    "knn_accuracy": 0.86,
+    "linear_probe_accuracy": 0.877
+}
