@@ -19,19 +19,7 @@ A supervised ResNet-50 baseline is also trained on STL-10 for comparison.
 
 The SimCLR pipeline follows:
 
-Image
-↓
-Data Augmentation
-↓
-ResNet-50 Encoder
-↓
-2048-D Representation
-↓
-Projection Head
-↓
-128-D Projection
-↓
-InfoNCE Contrastive Loss
+Image -> Data Augmentation -> ResNet-50 Encoder -> 2048-D Representation -> Projection Head -> 128-D Projection -> InfoNCE Contrastive Loss
 
 The encoder learns useful visual representations by bringing augmented views of the same image closer together while separating representations from different images.
 
@@ -113,28 +101,6 @@ t-SNE is used to visualize the learned representations in a lower-dimensional sp
 
 This helps inspect whether images from different classes form meaningful clusters.
 
-## Results
-
-### Self-Supervised SimCLR
-
-Official STL-10 test evaluation:
-
-**Accuracy: 84.94%**
-
-kNN evaluation:
-
-**Accuracy: 87.70%**
-
-### Supervised ResNet-50 Baseline
-
-A supervised ResNet-50 was trained directly using STL-10 labels.
-
-Best test accuracy:
-
-**93.04%**
-
-The supervised model provides a baseline for comparing representation learning with conventional supervised training.
-
 ## Results Summary
 
 | Method | Accuracy |
@@ -142,6 +108,9 @@ The supervised model provides a baseline for comparing representation learning w
 | SimCLR | 84.94% |
 | SimCLR kNN | 87.70% |
 | Supervised ResNet-50 | 93.04% |
+
+
+The supervised model provides a baseline for comparing representation learning with conventional supervised training.
 
 The supervised baseline achieves higher classification accuracy, while the SimCLR experiment demonstrates that useful visual representations can be learned without using class labels during representation learning.
 
